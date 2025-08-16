@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - AuraCrafts</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+  <header class="foggy-navbar">
+    
+    <nav class="navbar">
+     
+       
+       
+      
+
+      <div class="nav-icons">
+       
+        <h1 id="cartModal" class="cart-icon"><img src="https://siphokuhlenyana.github.io/AuraCrafts/shopping-cart.png" > Shop </h1>
+
+        <h1 id="goToProfile" class="profile-icon"><img src="https://siphokuhlenyana.github.io/AuraCrafts/profile-user.png"> Profile</h1>
+        <h1 id="goToProfile" class="profile-icon"><img src="https://siphokuhlenyana.github.io/AuraCrafts/logout.png"> Logout</h1>
+      </div>
+      <div class="logo"><img id="logo" src="https://siphokuhlenyana.github.io/AuraCrafts/IMG_7961.PNG" width="200px " height="180px"></div>
+      <div class="nav-icons">
+        <h1 id="cartModal" class="cart-icon">About </h1>
+
+        <h1 id="goToProfile" class="profile-icon">Contact</h1>
+       
+      </div>
+      
+     
+      <!--  -->
+    </nav>
+     <!-- <div><input type="text" placeholder="Search products..." /></div> -->
+  </header>
+
+  <main>
+    <section class="filters">
+      <button data-category="all" class="active">All</button>
+      <button data-category="rings">Rings</button>
+      <button data-category="wrist">Wrist</button>
+      <button data-category="waist">Waist</button>
+      <button data-category="necklaces">Necklaces</button>
+    </section>
+
+   
+
+    <section class="product-grid" id="productGrid">
+      <!-- Products will be injected here -->
+    </section>
+  </main>
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modalImg" src="" alt="Product" />
+      <h2 id="modalName"></h2>
+      <p id="modalPrice"></p>
+      <p id="modalDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button id="modalAddBtn"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Fshopping-bag-icon&psig=AOvVaw0I9-H1B1s8QjGyVEzp_dS2&ust=1755442993749000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjAzoTNj48DFQAAAAAdAAAAABAE"></button>
+    </div>
+  </div>
+  
+  <!-- Cart Modal -->
+<div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeCart">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p id="cartTotal">Total: R0.00</p>
+      <button id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
+  
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeCheckout">&times;</span>
+      <h2>Checkout</h2>
+      <form id="checkoutForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Card Number" required />
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </div>
+  
+  <footer>
+    <p> AuraCrafts &copy; 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>

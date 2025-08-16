@@ -1,0 +1,172 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #492201;
+  
+    color:black;
+  }
+  #logo{
+    border-radius: 50%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color:#85573277; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.377);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar input {
+    flex: 1;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  .hero {
+    background: url('https://siphokuhlenyana.github.io/AuraCrafts/temp_image_6B7D49D9-C417-485D-AF0A-81800EA0C86D.webp') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #492201;
+    text-shadow: 0 2px 4px rgb(240, 230, 230);
+    font-weight: 500;
+  }
+  #btnShop{
+    background-color: #855832;
+    color: black;
+    font-weight: 300;
+  }
+  button{
+    background-color: #855832;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #855832;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .hero h1{
+    font-size: xxx-large;
+    font-weight: 500;
+  }
+  h2{
+    color: white;
+  }
+  
+  .hero button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .categories, .products {
+    padding: 2rem;
+  }
+  
+  .category-grid, .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    
+  }
+  
+  .category-card {
+    background-color: #eee;
+  
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+  }
+  
+  .category-card:hover {
+    background-color: #ddd;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #85573277;
+    color: #fff;
+    
+  }
+
+  #cart {
+    cursor: pointer;
+    /* color: #007bff; */
+    
+    font-weight: bold;
+  }
+  #cart:hover {
+    color: #dce3eb;
+  }
+  .profile-icon {
+    cursor: pointer;
+    
+  }
+  .profile-icon:hover {
+    color:#fff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  
+  

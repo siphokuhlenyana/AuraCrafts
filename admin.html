@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - ModernMart</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Admin Panel</div>
+      <div class="nav-icons">
+         <button onclick="logoutAdmin()">Logout</button>
+        <a href="profile.html">👤 Profile</a>
+        <a href="shop.html">🛒 Shop</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="users">
+      <h2>Registered User</h2>
+      <div id="userInfo"></div>
+    </section>
+
+    <section class="orders">
+      <h2>All Orders</h2>
+      <div id="orderList"></div>
+    </section>
+  </main>
+
+ 
+
+  <script src="admin.js"></script>
+   <footer>
+    <p>&copy; 2025 ModernMart Admin. All rights reserved.</p>
+  </footer>
+</body>
+</html>

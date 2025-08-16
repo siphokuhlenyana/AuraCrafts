@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - ModernMart</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><img id="logo" src="https://siphokuhlenyana.github.io/AuraCrafts/IMG_7961.PNG" width="200px " height="180px"></div>
+      <div class="nav-icons">
+        <a href="shop.html#">🛒 Shop</a>
+      </div>
+    </nav>
+  </header>
+
+  
+
+  <section class="user-info">
+    <h2>User Profile</h2>
+    <div class="profile-pic">
+      <img id="profilePreview" src="https://siphokuhlenyana.github.io/AuraCrafts/temp_image_55551F70-7191-4EBD-858A-CD641EB99DCA.webp" alt="Profile Picture" />
+      <input type="file" id="profilePicInput" accept="image/*" />
+    </div>
+    <form id="userForm">
+      <input type="text" id="userName" placeholder="Full Name" required />
+      <input type="email" id="userEmail" placeholder="Email Address" required />
+      <button type="submit">Save Info</button>
+    </form>
+  </section>
+  <section class="order-history">
+    <h2>Order History</h2>
+    <div id="orders"></div>
+  </section>
+  
+  <footer>
+    <p> AuraCrafts &copy; 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>
