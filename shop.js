@@ -144,9 +144,9 @@ function renderCart() {
       <button onclick="removeFromCart(${index})">Remove</button>
     `;
     cartItemsDiv.appendChild(div);
-    total += parseFloat(item.price.replace("$", ""));
+    total += parseFloat(item.price.replace("R", ""));
   });
-  cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+  cartTotal.textContent = `Total: R${total.toFixed(2)}`;
 }
 
 function removeFromCart(index) {
