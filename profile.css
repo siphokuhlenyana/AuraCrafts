@@ -17,6 +17,10 @@ body {
     
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.377);
   }
+  .navbar a{
+    color: #fff;
+    text-decoration: none;
+  }
   
   main {
     padding: 2rem;
