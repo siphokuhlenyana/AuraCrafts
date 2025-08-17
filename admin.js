@@ -25,6 +25,17 @@ function renderOrders() {
           <option value="Delivered" ${order.status === "Delivered" ? "selected" : ""}>Delivered</option>
         </select>
       </p>
+        <div class="order-items">
+        ${order.items.map(item => `
+          <div class="order-item">
+            <img src="${item.img}" alt="${item.name}" />
+            <div>
+              <p><strong>${item.name}</strong></p>
+              <p>${item.price}</p>
+            </div>
+          </div>
+        `).join("")}
+      </div>
       <ul>
         ${order.items.map(item => `<li>${item.name} - ${item.price}</li>`).join("")}
       </ul>

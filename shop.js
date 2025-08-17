@@ -28,51 +28,30 @@ const products = [
   
   const grid = document.getElementById("productGrid");
   const filterButtons = document.querySelectorAll(".filters button");
-  
-  function renderProducts(category = "all") {
-    grid.innerHTML = "";
-    const filtered = category === "all" ? products : products.filter(p => p.category === category);
-    filtered.forEach(product => {
-      const card = document.createElement("div");
-      card.className = "product-card";
-      card.innerHTML = `
-        <img src="${product.img}" alt="${product.name}" />
-        <h3>${product.name}</h3>
-        <p>${product.price}</p>
-        <button><img src="https://siphokuhlenyana.github.io/AuraCrafts/shopping-bag.png"></button>
-      `;
-      grid.appendChild(card);
+  // ✅ Keep only this one
+function renderProducts(category = "all") {
+  grid.innerHTML = "";
+  const filtered = category === "all" ? products : products.filter(p => p.category === category);
+  filtered.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img src="${product.img}" alt="${product.name}" />
+      <h3>${product.name}</h3>
+      <p>${product.price}</p>
+      <button><img src="https://siphokuhlenyana.github.io/AuraCrafts/shopping-bag.png"></button>
+    `;
+    card.addEventListener("click", () => openModal(product));
+    const btn = card.querySelector("button");
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      addToCart(product);
     });
-  }
-  
-  filterButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelector(".filters .active").classList.remove("active");
-      btn.classList.add("active");
-      renderProducts(btn.dataset.category);
-    });
+    grid.appendChild(card);
   });
-  
-  renderProducts();
+}
 
-
-  function renderProducts(category = "all") {
-    grid.innerHTML = "";
-    const filtered = category === "all" ? products : products.filter(p => p.category === category);
-    filtered.forEach(product => {
-      const card = document.createElement("div");
-      card.className = "product-card";
-      card.innerHTML = `
-        <img src="${product.img}" alt="${product.name}" />
-        <h3>${product.name}</h3>
-        <p>${product.price}</p>
-         <button><img src="https://siphokuhlenyana.github.io/AuraCrafts/shopping-bag.png"></button>
-      `;
-      card.addEventListener("click", () => openModal(product));
-      grid.appendChild(card);
-    });
-  }
-
+renderProducts();
   const modal = document.getElementById("productModal");
 const modalImg = document.getElementById("modalImg");
 const modalName = document.getElementById("modalName");
@@ -99,8 +78,21 @@ window.addEventListener("click", (e) => {
   }
 });
 
+let currentProduct = null;
+
+function openModal(product) {
+  currentProduct = product;
+  modalImg.src = product.img;
+  modalName.textContent = product.name;
+  modalPrice.textContent = product.price;
+  modalDesc.textContent = "This is a beautiful item that complements your style.";
+  modal.classList.remove("hidden");
+}
+
+
 modalAddBtn.addEventListener("click", () => {
   alert("Product added to cart!");
+  addToCart(currentProduct);
   modal.classList.add("hidden");
 });
 
@@ -117,7 +109,7 @@ document.querySelectorAll('.product-card button').forEach((btn, index) => {
     addToCart(products[index]);
   });
 });
-const cartIcon = document.querySelector(".nav-icons span"); // First icon = cart
+const cartIcon = document.getElementById("openCartBtn") // First icon = cart
 const cartModal = document.getElementById("cartModal");
 const cartItemsDiv = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");

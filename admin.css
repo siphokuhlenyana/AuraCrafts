@@ -17,6 +17,12 @@ body {
     height: auto;
     
   }
+
+  #panel{
+    display: flex;
+    justify-content: center;
+
+  }
   img{
     border-radius: 50%;
     margin-top: 3rem;
@@ -25,9 +31,17 @@ body {
   .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
-    background-color: #222;
-    color: white;
+    background-color:#85573277; 
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.377);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .navbar a{
+    color: black;
+    text-decoration: none;
   }
   
   main {
@@ -37,6 +51,7 @@ body {
   section {
     margin-bottom: 2rem;
   }
+  
   
   #userInfo, .order-card {
     background: white;
